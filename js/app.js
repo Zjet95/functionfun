@@ -56,7 +56,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  let sum1 = sum(a,b);
+  console.log(sum1);
+  let answer = sum(sum1[0], c);
+  let firstX = multiply(a,b);
+  let answerX = multiply(firstX[0], c);
+  let thirdelement = `${a} and ${b} and ${c} sum to ${answer[0]}.`;
+  let fourthelement = `The product of ${a} and ${b} and ${c} is ${answerX[0]}.`;
 
+  return[answer[0], answerX[0], thirdelement, fourthelement];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -105,7 +113,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
